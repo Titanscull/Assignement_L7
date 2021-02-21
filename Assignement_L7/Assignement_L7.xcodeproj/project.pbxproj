@@ -13,6 +13,7 @@
 		EE9F5C7E25E243150006F7EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9F5C7C25E243150006F7EE /* Main.storyboard */; };
 		EE9F5C8025E243160006F7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9F5C7F25E243160006F7EE /* Assets.xcassets */; };
 		EE9F5C8325E243160006F7EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9F5C8125E243160006F7EE /* LaunchScreen.storyboard */; };
+		EE9F5C9025E25AE80006F7EE /* NameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F5C8F25E25AE80006F7EE /* NameBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EE9F5C7F25E243160006F7EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE9F5C8225E243160006F7EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE9F5C8425E243160006F7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE9F5C8F25E25AE80006F7EE /* NameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		EE9F5C8B25E2571D0006F7EE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EE9F5C8F25E25AE80006F7EE /* NameBrain.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				EE9F5C7B25E243150006F7EE /* MainViewController.swift in Sources */,
 				EE9F5C7725E243150006F7EE /* AppDelegate.swift in Sources */,
 				EE9F5C7925E243150006F7EE /* SceneDelegate.swift in Sources */,
+				EE9F5C9025E25AE80006F7EE /* NameBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameSurnameLabel: UILabel!
     
+    var nameModel = Name()
+    var surnameModel = Surname()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +22,24 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         
         self.nameTextField.delegate = self
         
-        nameSurnameLabel.isHidden = true
+//        nameSurnameLabel.isHidden = true
         
     }
     
-    /// Use return nutton to hide keyboard
+    @IBAction func nameControllerNextButton(_ sender: UIButton) {
+        if let enteredName = nameTextField.text {
+            nameModel.returnName(yuoreName: enteredName)
+            
+            print(enteredName)
+            nameSurnameLabel.text = nameModel.name
+            
+            print(nameModel.name)
+        }
+        
+    }
+   
+    
+    /// Use return button to hide keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return nameTextField.resignFirstResponder()
     }
