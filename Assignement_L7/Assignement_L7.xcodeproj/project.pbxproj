@@ -14,6 +14,7 @@
 		EE9F5C8025E243160006F7EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9F5C7F25E243160006F7EE /* Assets.xcassets */; };
 		EE9F5C8325E243160006F7EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9F5C8125E243160006F7EE /* LaunchScreen.storyboard */; };
 		EE9F5C9025E25AE80006F7EE /* NameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F5C8F25E25AE80006F7EE /* NameBrain.swift */; };
+		EEA7C6FA25E2F981009CB704 /* SurnameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA7C6F925E2F981009CB704 /* SurnameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EE9F5C8225E243160006F7EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE9F5C8425E243160006F7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE9F5C8F25E25AE80006F7EE /* NameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameBrain.swift; sourceTree = "<group>"; };
+		EEA7C6F925E2F981009CB704 /* SurnameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurnameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				EE9F5C7A25E243150006F7EE /* NameViewController.swift */,
+				EEA7C6F925E2F981009CB704 /* SurnameViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			files = (
 				EE9F5C7B25E243150006F7EE /* NameViewController.swift in Sources */,
 				EE9F5C7725E243150006F7EE /* AppDelegate.swift in Sources */,
+				EEA7C6FA25E2F981009CB704 /* SurnameViewController.swift in Sources */,
 				EE9F5C7925E243150006F7EE /* SceneDelegate.swift in Sources */,
 				EE9F5C9025E25AE80006F7EE /* NameBrain.swift in Sources */,
 			);

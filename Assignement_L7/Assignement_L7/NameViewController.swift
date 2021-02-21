@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITextFieldDelegate {
+class NameViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -31,10 +31,10 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         if let enteredName = nameTextField.text {
             nameModel.returnName(yuoreName: enteredName)
             
-            print(enteredName)
+            print("User did type his name as \(enteredName)")
             nameSurnameLabel.text = nameModel.name
             
-            print(nameModel.name)
+            print(" Model saved name as \(nameModel.name)")
         }
     }
     
