@@ -11,7 +11,7 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var surnameTextField: UITextField!
     
-    var surname = Surname()
+    var surnameModel = Surname()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,18 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
         self.surnameTextField.delegate = self
         
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func surnameViewNextControllerButton(_ sender: Any) {
+        if let enteredSurname = surnameTextField.text {
+            surnameModel.returnSurname(youreSurname: enteredSurname)
+            
+            print("User entered surname \(enteredSurname)")
+            print("Model saved surname \(surnameModel.surname)")
+        }
+        
+        
+        
     }
     
     /// Use return button to hide keyboard
@@ -31,7 +43,5 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
-    @IBAction func surnameViewNextControllerButton(_ sender: Any) {
-    }
     
 }

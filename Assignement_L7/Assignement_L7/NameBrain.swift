@@ -21,7 +21,7 @@ class Surname {
     var surname = ""
     
     func returnSurname(youreSurname: String) {
-      surname = ""
+      surname = youreSurname
     }
     
 }
