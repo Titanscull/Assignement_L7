@@ -22,10 +22,11 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         
         self.nameTextField.delegate = self
         
-//        nameSurnameLabel.isHidden = true
+        nameSurnameLabel.isHidden = true
         
     }
     
+    /// Next button action - load data & bring appearance of a SurnameVC
     @IBAction func nameControllerNextButton(_ sender: UIButton) {
         if let enteredName = nameTextField.text {
             nameModel.returnName(yuoreName: enteredName)
@@ -35,9 +36,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             
             print(nameModel.name)
         }
-        
     }
-   
     
     /// Use return button to hide keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -48,6 +47,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+   
     
 }
 

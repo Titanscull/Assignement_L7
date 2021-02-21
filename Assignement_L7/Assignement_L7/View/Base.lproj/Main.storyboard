@@ -46,7 +46,7 @@
                     <navigationItem key="navigationItem" title="Login" id="e1h-W3-Zkv"/>
                     <connections>
                         <outlet property="nameSurnameLabel" destination="rHr-64-gcW" id="xzk-RM-4wm"/>
-                        <outlet property="nameTextField" destination="NEL-yg-AT9" id="PYI-WM-97G"/>
+                        <outlet property="nameTextField" destination="NEL-yg-AT9" id="n7o-5A-LsY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
