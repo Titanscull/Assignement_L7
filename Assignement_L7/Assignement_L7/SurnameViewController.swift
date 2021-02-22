@@ -12,6 +12,7 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var surnameTextField: UITextField!
     
     var surnameModel = Surname()
+    
     var name = ""
     
     override func viewDidLoad() {
@@ -23,11 +24,15 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func surnameViewNextControllerButton(_ sender: Any) {
+        
+        if surnameTextField.text == "" {
+            return
+        }
+        
         if let enteredSurname = surnameTextField.text {
             surnameModel.returnSurname(youreSurname: enteredSurname)
-            
-            print("User entered surname \(enteredSurname)")
-            print("Model saved surname \(surnameModel.surname)")
+            print("User entered surname \(surnameModel.surname)")
+            print("Model saved surname as \(surnameModel.surname)")
         }
         
         performSegue(withIdentifier: "confirmVC", sender: self)
@@ -35,6 +40,7 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let confirmVC = segue.destination as! ConfirmViewController
         
         confirmVC.firstName = name

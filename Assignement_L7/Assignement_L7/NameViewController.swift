@@ -10,12 +10,9 @@ import UIKit
 class NameViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var nameSurnameLabel: UILabel!
     
     var nameModel = Name()
-    
-    var fullName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,18 +22,21 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         
         nameSurnameLabel.isHidden = true
         
-        nameSurnameLabel.text = "Wellcome \(fullName)"
+        nameSurnameLabel.text = nameModel.name
         
     }
     
     /// Next button action - load data & bring appearance of a SurnameVC
     @IBAction func nameControllerNextButton(_ sender: UIButton) {
+        
+        if nameTextField.text == "" || nameSurnameLabel.isHidden == false {
+            return
+        }
+        
         if let enteredName = nameTextField.text {
             nameModel.returnName(yuoreName: enteredName)
             
             print("User did type his name as \(enteredName)")
-            nameSurnameLabel.text = nameModel.name
-            
             print(" Model saved name as \(nameModel.name)")
         }
         
@@ -58,6 +58,8 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
    
+    @IBAction func unwindHome(_ sender: UIStoryboardSegue) {
+    }
     
 }
 
