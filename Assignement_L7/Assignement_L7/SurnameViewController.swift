@@ -8,10 +8,11 @@
 import UIKit
 
 class SurnameViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var surnameTextField: UITextField!
     
     var surnameModel = Surname()
+    var name = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +30,15 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
             print("Model saved surname \(surnameModel.surname)")
         }
         
+        performSegue(withIdentifier: "confirmVC", sender: self)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let confirmVC = segue.destination as! ConfirmViewController
         
+        confirmVC.firstName = name
+        confirmVC.lastName = surnameModel.surname
     }
     
     /// Use return button to hide keyboard

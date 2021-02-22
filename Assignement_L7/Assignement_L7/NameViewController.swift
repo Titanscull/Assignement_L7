@@ -14,7 +14,8 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameSurnameLabel: UILabel!
     
     var nameModel = Name()
-    var surnameModel = Surname()
+    
+    var fullName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,8 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         self.nameTextField.delegate = self
         
         nameSurnameLabel.isHidden = true
+        
+        nameSurnameLabel.text = "Wellcome \(fullName)"
         
     }
     
@@ -36,6 +39,13 @@ class NameViewController: UIViewController, UITextFieldDelegate {
             
             print(" Model saved name as \(nameModel.name)")
         }
+        
+        performSegue(withIdentifier: "surnameVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let surnameVC = segue.destination as! SurnameViewController
+        surnameVC.name = nameModel.name
     }
     
     /// Use return button to hide keyboard

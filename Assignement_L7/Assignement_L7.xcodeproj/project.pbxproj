@@ -15,6 +15,7 @@
 		EE9F5C8325E243160006F7EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9F5C8125E243160006F7EE /* LaunchScreen.storyboard */; };
 		EE9F5C9025E25AE80006F7EE /* NameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F5C8F25E25AE80006F7EE /* NameBrain.swift */; };
 		EEA7C6FA25E2F981009CB704 /* SurnameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA7C6F925E2F981009CB704 /* SurnameViewController.swift */; };
+		EEEED12825E43EA9003E1682 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEED12725E43EA9003E1682 /* ConfirmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EE9F5C8425E243160006F7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE9F5C8F25E25AE80006F7EE /* NameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameBrain.swift; sourceTree = "<group>"; };
 		EEA7C6F925E2F981009CB704 /* SurnameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurnameViewController.swift; sourceTree = "<group>"; };
+		EEEED12725E43EA9003E1682 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				EE9F5C7A25E243150006F7EE /* NameViewController.swift */,
 				EEA7C6F925E2F981009CB704 /* SurnameViewController.swift */,
+				EEEED12725E43EA9003E1682 /* ConfirmViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				EE9F5C7B25E243150006F7EE /* NameViewController.swift in Sources */,
 				EE9F5C7725E243150006F7EE /* AppDelegate.swift in Sources */,
 				EEA7C6FA25E2F981009CB704 /* SurnameViewController.swift in Sources */,
+				EEEED12825E43EA9003E1682 /* ConfirmViewController.swift in Sources */,
 				EE9F5C7925E243150006F7EE /* SceneDelegate.swift in Sources */,
 				EE9F5C9025E25AE80006F7EE /* NameBrain.swift in Sources */,
 			);

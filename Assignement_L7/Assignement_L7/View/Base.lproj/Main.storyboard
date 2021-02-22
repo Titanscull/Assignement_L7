@@ -25,7 +25,6 @@
                                 </state>
                                 <connections>
                                     <action selector="nameControllerNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R1b-XR-JQv"/>
-                                    <segue destination="cJj-0r-1ty" kind="show" id="9TY-vy-kYd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHr-64-gcW">
@@ -51,6 +50,7 @@
                     <connections>
                         <outlet property="nameSurnameLabel" destination="rHr-64-gcW" id="xzk-RM-4wm"/>
                         <outlet property="nameTextField" destination="NEL-yg-AT9" id="n7o-5A-LsY"/>
+                        <segue destination="cJj-0r-1ty" kind="show" identifier="surnameVC" id="N9J-Sx-xw1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,16 +89,17 @@
                     <navigationItem key="navigationItem" id="lo4-7s-ZZ6"/>
                     <connections>
                         <outlet property="surnameTextField" destination="wl7-A9-6a8" id="u9V-S1-JMv"/>
+                        <segue destination="iQw-zg-s6f" kind="show" identifier="confirmVC" id="k6l-yx-0ZG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwQ-ZV-ChT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1731.8840579710147" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirm View Controller-->
         <scene sceneID="R9w-BQ-o0r">
             <objects>
-                <viewController id="iQw-zg-s6f" sceneMemberID="viewController">
+                <viewController id="iQw-zg-s6f" customClass="ConfirmViewController" customModule="Assignement_L7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IAe-UO-jDB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +118,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYy-sg-Luz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYy-sg-Luz">
                                 <rect key="frame" x="169" y="274" width="212" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -132,7 +133,7 @@
                                     <color key="titleColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05D-sh-5o5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05D-sh-5o5">
                                 <rect key="frame" x="197" y="369" width="184" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -143,6 +144,11 @@
                         <viewLayoutGuide key="safeArea" id="nlR-zF-Mef"/>
                         <color key="backgroundColor" red="0.49183238639999999" green="0.49183238639999999" blue="0.49183238639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ct8-Cm-mcb"/>
+                    <connections>
+                        <outlet property="nameLable" destination="JYy-sg-Luz" id="CUK-3W-Pak"/>
+                        <outlet property="surnameLable" destination="05D-sh-5o5" id="ntV-Jq-Dij"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkd-ua-blD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
