@@ -48,6 +48,12 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         surnameVC.name = nameModel.name
     }
     
+    @IBAction func resetButton(_ sender: UIButton) {
+        loadView()
+        nameSurnameLabel.isHidden = true
+    }
+    
+    
     /// Use return button to hide keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return nameTextField.resignFirstResponder()
