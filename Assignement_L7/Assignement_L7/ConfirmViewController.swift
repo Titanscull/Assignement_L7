@@ -16,28 +16,19 @@ class ConfirmViewController: UIViewController {
     @IBOutlet weak var nameLable: UILabel!
     @IBOutlet weak var surnameLable: UILabel!
     
-    var firstName = ""
-    var lastName = ""
+    weak var delegate: ConfirmViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        nameLable.text = firstName
-        surnameLable.text = lastName
         
     }
-    
-    /// Prepare for unwind segue to first screen
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    @IBAction func saveButton(_ sender: UIButton) {
+        let name = nameLable.text ?? ""
+        let surname = surnameLable.text ?? ""
         
-        let nameVC = segue.destination as! NameViewController
+        let fullname = " Wellcome \(name) \(surname)"
         
-        nameVC.nameSurnameLabel.text = "Wellcome \(firstName) \(lastName)"
-        
-        nameVC.nameSurnameLabel.isHidden = false
-        
-        nameVC.nameTextField.isHidden = true
+        delegate?.getFullName(fullname: fullname)
         
     }
-
 }

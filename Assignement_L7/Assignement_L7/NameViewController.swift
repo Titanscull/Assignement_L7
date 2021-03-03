@@ -32,6 +32,14 @@ class NameViewController: UIViewController {
         if nameTextField.text == "" || nameSurnameLabel.isHidden == false {
             return
         }
+        
+        if let enteredName = nameTextField.text {
+            nameModel.returnName(yuoreName: enteredName)
+            
+            print("User did type his name as \(enteredName)")
+            print(" Model saved name as \(nameModel.name)")
+        }
+        
         performSegue(withIdentifier: "surnameVC", sender: self)
     }
     
@@ -52,7 +60,7 @@ class NameViewController: UIViewController {
         nameSurnameLabel.isHidden = true
     }
     
-   
+    
 }
 
 extension NameViewController: ConfirmViewControllerDelegate {

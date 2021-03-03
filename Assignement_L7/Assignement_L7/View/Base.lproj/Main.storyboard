@@ -142,6 +142,7 @@
                                     <color key="titleColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveButton:" destination="iQw-zg-s6f" eventType="touchUpInside" id="PAG-Gy-q3n"/>
                                     <segue destination="gY7-Xn-6iJ" kind="unwind" unwindAction="unwindHome:" id="rAe-YF-WuS"/>
                                 </connections>
                             </button>

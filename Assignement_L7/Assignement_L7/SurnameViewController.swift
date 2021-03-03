@@ -43,10 +43,21 @@ class SurnameViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let confirmVC = segue.destination as! ConfirmViewController
-        
-        confirmVC.firstName = name
-        confirmVC.lastName = surnameModel.surname
+        if segue.identifier == "confirmVC" {
+            guard let confirmVC = segue.destination as? ConfirmViewController else {
+                return
+            }
+            _ = confirmVC.view
+            confirmVC.nameLable.text = name
+            confirmVC.surnameLable.text = surnameModel.surname
+            
+            confirmVC.delegate = delegate
+        }
+//
+//        let confirmVC = segue.destination as! ConfirmViewController
+//
+//        confirmVC.firstName = name
+//        confirmVC.lastName = surnameModel.surname
     }
    
 }
