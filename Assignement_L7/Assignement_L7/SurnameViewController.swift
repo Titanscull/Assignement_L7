@@ -53,11 +53,6 @@ class SurnameViewController: UIViewController {
             
             confirmVC.delegate = delegate
         }
-//
-//        let confirmVC = segue.destination as! ConfirmViewController
-//
-//        confirmVC.firstName = name
-//        confirmVC.lastName = surnameModel.surname
     }
    
 }
@@ -73,6 +68,5 @@ extension SurnameViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
     
 }

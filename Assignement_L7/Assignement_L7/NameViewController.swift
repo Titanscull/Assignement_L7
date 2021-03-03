@@ -60,7 +60,6 @@ class NameViewController: UIViewController {
         nameSurnameLabel.isHidden = true
     }
     
-    
 }
 
 extension NameViewController: ConfirmViewControllerDelegate {
