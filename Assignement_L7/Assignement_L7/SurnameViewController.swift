@@ -7,13 +7,15 @@
 
 import UIKit
 
-class SurnameViewController: UIViewController, UITextFieldDelegate {
+class SurnameViewController: UIViewController {
     
     @IBOutlet weak var surnameTextField: UITextField!
     
     var surnameModel = Surname()
     
     var name = ""
+    
+    weak var delegate: ConfirmViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +48,10 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
         confirmVC.firstName = name
         confirmVC.lastName = surnameModel.surname
     }
+   
+}
+
+extension SurnameViewController: UITextFieldDelegate {
     
     /// Use return button to hide keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

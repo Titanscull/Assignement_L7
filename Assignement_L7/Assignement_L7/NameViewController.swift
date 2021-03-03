@@ -7,10 +7,12 @@
 
 import UIKit
 
-class NameViewController: UIViewController, UITextFieldDelegate {
+class NameViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var nameSurnameLabel: UILabel!
+    
+    weak var delegate: ConfirmViewControllerDelegate?
     
     var nameModel = Name()
     
@@ -18,11 +20,9 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.nameTextField.delegate = self
+        nameTextField.delegate = self
         
         nameSurnameLabel.isHidden = true
-        
-        nameSurnameLabel.text = nameModel.name
         
     }
     
@@ -32,20 +32,19 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         if nameTextField.text == "" || nameSurnameLabel.isHidden == false {
             return
         }
-        
-        if let enteredName = nameTextField.text {
-            nameModel.returnName(yuoreName: enteredName)
-            
-            print("User did type his name as \(enteredName)")
-            print(" Model saved name as \(nameModel.name)")
-        }
-        
         performSegue(withIdentifier: "surnameVC", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let surnameVC = segue.destination as! SurnameViewController
-        surnameVC.name = nameModel.name
+        
+        if segue.identifier == "surnameVC" {
+            guard let surnameVC = segue.destination as? SurnameViewController else {return}
+            
+            _ = surnameVC.view
+            
+            surnameVC.name = nameModel.name
+            surnameVC.delegate = self
+        }
     }
     
     @IBAction func resetButton(_ sender: UIButton) {
@@ -53,6 +52,18 @@ class NameViewController: UIViewController, UITextFieldDelegate {
         nameSurnameLabel.isHidden = true
     }
     
+   
+}
+
+extension NameViewController: ConfirmViewControllerDelegate {
+    func getFullName(fullname: String) {
+        self.nameSurnameLabel.text = fullname
+        self.nameSurnameLabel.isHidden = false
+        self.nameTextField.isHidden = true
+    }
+}
+
+extension NameViewController: UITextFieldDelegate {
     
     /// Use return button to hide keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -63,9 +74,8 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-   
+    
     @IBAction func unwindHome(_ sender: UIStoryboardSegue) {
     }
     
 }
-

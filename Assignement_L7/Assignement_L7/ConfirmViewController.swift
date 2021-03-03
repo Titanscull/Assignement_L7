@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ConfirmViewControllerDelegate: class {
+    func getFullName(fullname: String)
+}
+
 class ConfirmViewController: UIViewController {
     
     @IBOutlet weak var nameLable: UILabel!
